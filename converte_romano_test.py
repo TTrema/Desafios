@@ -6,21 +6,10 @@ import unittest
 
 class Testvalida2(unittest.TestCase):
     def testform(self):
-        testcase = 3998
-        expected = "MMMCMXCVIII"
-        self.assertEqual(valida_numero(testcase), (expected))
 
-class Testvalida(unittest.TestCase):
-    def testform(self):
-        testcase = 3999
-        expected = "invalido"
-        self.assertEqual(valida_numero(testcase), (expected))
-
-class Testnumero(unittest.TestCase):
-    def testform(self):
-        testcase = 3998
-        expected = "MMMCMXCVIII"
-        self.assertEqual(numero_para_romano(testcase), (expected))
+        self.assertEqual(valida_numero(3998), ("MMMCMXCVIII"))
+        self.assertEqual(valida_numero(3999), ("invalido"))
+        self.assertEqual(numero_para_romano(3998), ("MMMCMXCVIII"))
 
 
 unittest.main()

@@ -6,15 +6,9 @@ import unittest
 
 class Testformatacao(unittest.TestCase):
     def testform(self):
-        testcase = "123.456.789-01"
-        expected = "12345678901"
-        self.assertEqual(retira_formatacao(testcase), (expected))
 
-class Testvalida(unittest.TestCase):
-    def testform(self):
-        testcase = "11111111111"
-        expected = "todos os digitos repetidos não devem ser aceitos"
-        self.assertEqual(valida_cpf(testcase), (expected))
+        self.assertEqual(retira_formatacao("123.456.789-01"), ("12345678901"))
+        self.assertEqual(valida_cpf("11111111111"), ("todos os digitos repetidos não devem ser aceitos"))
 
 
 unittest.main()

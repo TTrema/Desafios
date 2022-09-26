@@ -21,7 +21,7 @@ def numero_para_romano(num):
 
     return roman
     
-
-print (valida_numero(3998))
+numero = int(input("insira um numro de 0 a 3998:"))
+print (valida_numero(numero))
 #print (numero_para_romano(3998))
 

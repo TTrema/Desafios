@@ -5,26 +5,11 @@ import unittest
 
 class Testclassifica(unittest.TestCase):
     def testform(self):
-        testcase = "!An3g4s"
-        expected = 0
-        self.assertEqual(classifica_senha(testcase), (expected))
-
-class Testclassifica2(unittest.TestCase):
-    def testform(self):
-        testcase = "Password"
-        expected = 1
-        self.assertEqual(classifica_senha(testcase), (expected))
-
-class Testclassifica3(unittest.TestCase):
-    def testform(self):
-        testcase = "P4ssw0rd"
-        expected = 2
-        self.assertEqual(classifica_senha(testcase), (expected))
-
-class Testclassifica4(unittest.TestCase):
-    def testform(self):
-        testcase = "Password!"
-        expected = 2
-        self.assertEqual(classifica_senha(testcase), (expected))
+        self.assertEqual(classifica_senha("!An3g4s"), (0))
+        self.assertEqual(classifica_senha("Password"), (1))
+        self.assertEqual(classifica_senha("P4ssw0rd"), (2))
+        self.assertEqual(classifica_senha("Password!"), (2))
+        self.assertEqual(classifica_senha(""), ("Digite uma senha"))
+        
 
 unittest.main()

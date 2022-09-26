@@ -3,7 +3,11 @@
 import re
 #from ssl import _PasswordType
 
+senha = input(r"Digite a senha a ser avaliada:")
+
 def classifica_senha(pwd):
+    if len(pwd) == 0:
+        return "Digite uma senha"
     if len(pwd) <= 7:
         return 0
     else:    
@@ -22,8 +26,8 @@ def classifica_senha(pwd):
         score = len([b for b in password_strength.values() if b])
         return password_scores[score]
     
-    
-print (classifica_senha("gwagad4asr"))
+
+print (classifica_senha(senha))
 
 
 #_PasswordType.split() 

@@ -21,7 +21,7 @@ def valida_cpf(num_cpf):
         if (chk == True):
             return "todos os digitos repetidos não devem ser aceitos"
         else:
-            return ("Not equal")
+            return (num_cpf)
 
-
-#print(retira_formatacao("111.111.111-11"))
+cpf = input("Digite o CPF:")
+print(retira_formatacao(cpf))
